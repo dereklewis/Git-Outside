@@ -1,0 +1,12 @@
+[
+  {
+    "campground_name": "Royal Gorge",
+    "state": "Utah",
+    "city": "Salt Lake",
+    "description": "Wow cool",
+    "accessibility": false,
+    "price": 0.0,
+    "review_text": "Wow so cool, again",
+    "rating": 5
+  }
+]
