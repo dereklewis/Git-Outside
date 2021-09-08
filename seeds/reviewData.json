@@ -8,5 +8,35 @@
     "price": 0.0,
     "review_text": "Wow so cool, again",
     "rating": 5
+  },
+  {
+    "campground_name": "Hanging Lake",
+    "state": "Colorado",
+    "city": "Mountain Town",
+    "description": "Super duper",
+    "accessibility": false,
+    "price": 50.0,
+    "review_text": "Wow amazing",
+    "rating": 5
+  },
+  {
+    "campground_name": "Lookout Canyon",
+    "state": "Nebraska",
+    "city": "Omaha",
+    "description": "Big canyon wow",
+    "accessibility": true,
+    "price": 24.0,
+    "review_text": "Best trip ever",
+    "rating": 5
+  },
+  {
+    "campground_name": "Big Lake",
+    "state": "Washington",
+    "city": "Spokane",
+    "description": "SO much water",
+    "accessibility": true,
+    "price": 38.0,
+    "review_text": "Cant wait to go back next year",
+    "rating": 5
   }
 ]
