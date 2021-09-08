@@ -42,4 +42,11 @@ router.get("/", async (req, res) => {
 //   }
 // });
 
+router.get("/storybook", (req, res) =>
+  res.render("index", { routeName: "Member" })
+);
+router.get("/storybook2", (req, res) =>
+  res.render("login", { routeName: "Login" })
+);
+
 module.exports = router;
