@@ -45,20 +45,27 @@ router.post("/", async (req, res) => {
 
 router.get("/:state", async (req, res) => {
   try {
-    const stateReviews = await Review.findByPk(req.params.state, {
-      attributes: [
-        "id",
-        "campground_name",
-        "city",
-        "state",
-        "description",
-        "accessibility",
-        "price",
-        "review_text",
-        "rating",
-      ],
-    });
-    console.log(stateReviews);
+    const stateReviews = await Review.findAll(
+      {
+        where: {
+          state: req.params.state,
+        },
+      },
+      {
+        attributes: [
+          "id",
+          "campground_name",
+          "city",
+          "state",
+          "description",
+          "accessibility",
+          "price",
+          "review_text",
+          "rating",
+        ],
+      }
+    );
+    // console.log(stateReviews);
     // const reviews = stateReviews.get({ plain: true });
     // res.render("gallery", { gallery });
     res.status(200).json(stateReviews);
