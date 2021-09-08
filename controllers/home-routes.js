@@ -9,6 +9,7 @@ router.get("/", async (req, res) => {
         "id",
         "campground_name",
         "city",
+        "state",
         "description",
         "accessibility",
         "price",
@@ -18,6 +19,58 @@ router.get("/", async (req, res) => {
     });
     res.status(200).json(dbReviewData);
   } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post("/", async (req, res) => {
+  console.log("POST route working ");
+  try {
+    const newReview = Review.create({
+      campground_name: req.body.campground_name,
+      city: req.body.city,
+      state: req.body.state,
+      description: req.body.description,
+      accessibility: req.body.accessibility,
+      price: req.body.price,
+      review_text: req.body.review_text,
+      rating: req.body.rating,
+    });
+
+    res.status(200).json(newReview);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/:state", async (req, res) => {
+  try {
+    const stateReviews = await Review.findAll(
+      {
+        where: {
+          state: req.params.state,
+        },
+      },
+      {
+        attributes: [
+          "id",
+          "campground_name",
+          "city",
+          "state",
+          "description",
+          "accessibility",
+          "price",
+          "review_text",
+          "rating",
+        ],
+      }
+    );
+    // console.log(stateReviews);
+    // const reviews = stateReviews.get({ plain: true });
+    // res.render("gallery", { gallery });
+    res.status(200).json(stateReviews);
+  } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
