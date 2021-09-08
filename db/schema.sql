@@ -14,5 +14,5 @@ CREATE TABLE campground (
     price DECIMAL NOT NULL,
     review_text VARCHAR(500)
     rating INT NOT NULL, 
-    PRIMARY KEY(id)
+    PRIMARY KEY(state)
 );

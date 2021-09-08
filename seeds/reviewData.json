@@ -1,7 +1,7 @@
 [
   {
     "campground_name": "Royal Gorge",
-    "state": "Utah",
+    "state": "UT",
     "city": "Salt Lake",
     "description": "Wow cool",
     "accessibility": false,
@@ -11,7 +11,7 @@
   },
   {
     "campground_name": "Hanging Lake",
-    "state": "Colorado",
+    "state": "CO",
     "city": "Mountain Town",
     "description": "Super duper",
     "accessibility": false,
@@ -21,7 +21,7 @@
   },
   {
     "campground_name": "Lookout Canyon",
-    "state": "Nebraska",
+    "state": "NE",
     "city": "Omaha",
     "description": "Big canyon wow",
     "accessibility": true,
@@ -31,7 +31,7 @@
   },
   {
     "campground_name": "Big Lake",
-    "state": "Washington",
+    "state": "WA",
     "city": "Spokane",
     "description": "SO much water",
     "accessibility": true,
