@@ -43,65 +43,30 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/:state", async (req, res) => {
-  try {
-    const stateReviews = await Review.findAll(
-      {
-        where: {
-          state: req.params.state,
-        },
-      },
-      {
-        attributes: [
-          "id",
-          "campground_name",
-          "city",
-          "state",
-          "description",
-          "accessibility",
-          "price",
-          "review_text",
-          "rating",
-        ],
-      }
-    );
-    // console.log(stateReviews);
-    // const reviews = stateReviews.get({ plain: true });
-    const reviews = stateReviews.map((project) => project.get({ plain: true }));
-    console.log(reviews);
-    res.render("allreviews", { reviews });
-    // res.status(200).json(stateReviews);
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+router.get("/login", (req, res) => {
+  // if (req.session.logged_in) {
+  //   res.redirect("/");
+  //   return;
+  // }
+  console.log("login route working!!!!!!!!!!!!!!!!!");
+  res.render("login", { routeName: "loginRoute" });
 });
 
-// router.post("/", (req, res))
+router.get("/new", async (req, res) => {
+  // if (req.session.logged_in) {
+  // res.redirect("/");
 
-// router.get("/", withAuth, async (req, res) => {
-//   try {
-//     const userData = await User.findAll({
-//       attributes: { exclude: ["password"] },
-//       order: [["name", "ASC"]],
-//     });
+  // }
 
-//     const users = userData.map((project) => project.get({ plain: true }));
-
-//     res.render("homepage", {
-//       users,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+  res.render("post-new-review", {});
+});
 
 router.get("/storybook", (req, res) =>
   res.render("index", { routeName: "Member" })
 );
-router.get("/storybook2", (req, res) =>
-  res.render("login", { routeName: "Login" })
-);
+
+// router.get("/storybook2", (req, res) =>
+//   res.render("login", { routeName: "Login" })
+// );
 
 module.exports = router;
