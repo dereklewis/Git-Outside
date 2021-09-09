@@ -3,7 +3,7 @@
     "campground_name": "Royal Gorge",
     "state": "UT",
     "city": "Salt Lake",
-    "description": "Wow cool",
+    "amenities": true,
     "accessibility": false,
     "price": 0.0,
     "review_text": "Wow so cool, again",
@@ -13,7 +13,7 @@
     "campground_name": "Hanging Lake",
     "state": "CO",
     "city": "Mountain Town",
-    "description": "Super duper",
+    "amenities": false,
     "accessibility": false,
     "price": 50.0,
     "review_text": "Wow amazing",
@@ -23,20 +23,20 @@
     "campground_name": "Lookout Canyon",
     "state": "NE",
     "city": "Omaha",
-    "description": "Big canyon wow",
+    "amenities": false,
     "accessibility": true,
     "price": 24.0,
     "review_text": "Best trip ever",
-    "rating": 5
+    "rating": 4
   },
   {
     "campground_name": "Big Lake",
     "state": "WA",
     "city": "Spokane",
-    "description": "SO much water",
+    "amenities": true,
     "accessibility": true,
     "price": 38.0,
     "review_text": "Cant wait to go back next year",
-    "rating": 5
+    "rating": 3
   }
 ]

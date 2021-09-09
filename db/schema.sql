@@ -9,9 +9,9 @@ CREATE TABLE campground (
     campground_name VARCHAR(30) NOT NULL,
     state VARCHAR(2) NOT NULL,
     city VARCHAR(30) NOT NULL,
-    description VARCHAR(30) NOT NULL,
-    accessibility BIT NOT NULL,
-    price DECIMAL NOT NULL,
+    amenities BOOLEAN NOT NULL,
+    accessibility BOOLEAN NOT NULL,
+    price VARCHAR(12) NOT NULL,
     review_text VARCHAR(500)
     rating INT NOT NULL, 
     PRIMARY KEY(state)
