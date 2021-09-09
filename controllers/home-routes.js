@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
         "campground_name",
         "city",
         "state",
-        "amenities",
+        "description",
         "accessibility",
         "price",
         "review_text",
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
       campground_name: req.body.campground_name,
       city: req.body.city,
       state: req.body.state,
-      amenities: req.body.amenities,
+      description: req.body.description,
       accessibility: req.body.accessibility,
       price: req.body.price,
       review_text: req.body.review_text,
@@ -57,7 +57,7 @@ router.get("/:state", async (req, res) => {
           "campground_name",
           "city",
           "state",
-          "amenities",
+          "description",
           "accessibility",
           "price",
           "review_text",
@@ -67,8 +67,10 @@ router.get("/:state", async (req, res) => {
     );
     // console.log(stateReviews);
     // const reviews = stateReviews.get({ plain: true });
-    // res.render("gallery", { gallery });
-    res.status(200).json(stateReviews);
+    const reviews = stateReviews.map((project) => project.get({ plain: true }));
+    console.log(reviews);
+    res.render("allreviews", { reviews });
+    // res.status(200).json(stateReviews);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
