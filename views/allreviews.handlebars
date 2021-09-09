@@ -1,13 +1,13 @@
  <section class="backgroundImageForest">
         <!-- container div for cards -->
         <div class="container d-flex justify-content-center text-center">
-
+{{#each reviews as |reviews| }}
 <!-- CARD 1 -->
             <div class="card mb-3 mt-3 col-4 m-5">
-                <h3 class="card-header bg-primary text-light">CAMPSITE NAME</h3>
+                <h3 class="card-header bg-primary text-light">{{reviews.campground_name}}</h3>
                 <div class="card-body backgroundGray">
-                  <h5 class="card-title">CITY</h5>
-                  <h6 class="card-subtitle text-muted">STATE</h6>
+                  <h5 class="card-title">{{reviews.city}}</h5>
+                  <h6 class="card-subtitle text-muted">{{reviews.state}}</h6>
                 </div>
 
                 <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
@@ -16,9 +16,9 @@
                 </svg>
 
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item bg-dark text-light"> ⭐ RATING</li>
-                  <li class="list-group-item bg-dark text-light">AMENITIES <br> yes no?</bt></li>
-                  <li class="list-group-item bg-dark text-light">ACCESSIBILITY <br> (4 wheel drive y/n)</li>
+                  <li class="list-group-item bg-dark text-light">RATING: <br> {{reviews.rating}}</li>
+                  <li class="list-group-item bg-dark text-light">AMENITIES: <br> {{reviews.amenities}}</bt></li>
+                  <li class="list-group-item bg-dark text-light">ACCESSIBILITY: <br> {{reviews.accessibility}}</li>
                 </ul>
 
 <!-- ACCORDIAN -->
@@ -31,92 +31,14 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            {{reviews.review_text}}
                         </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-dark text-light">
-                  PRICE <br> $ per night
+                  PRICE: <br> {{reviews.price}}
                 </div>
             </div>
 
-<!-- CARD 2 -->
-      <div class="card mb-3 mt-3 col-4 m-5">
-        <h3 class="card-header bg-primary text-light">Horseshoe Bend</h3>
-        <div class="card-body backgroundGray">
-          <h5 class="card-title">Page</h5>
-          <h6 class="card-subtitle text-muted">AR</h6>
-        </div>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-          <rect width="100%" height="100%" fill="#868e96"></rect>
-          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-        </svg>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item bg-dark text-light">⭐ ⭐</li>
-          <li class="list-group-item bg-dark text-light">Amenities: <br> No </li>
-          <li class="list-group-item bg-dark text-light">4 Wheel Drive <br> Not Required</li>
-        </ul>
-
-<!-- ACCORDIAN -->
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed bg-warning text-light text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Click here to read this review.  
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer bg-dark text-light">
-          Price <br> $15 per night
-        </div>
-      </div>
-
-
-<!-- CARD 3 -->
-      <div class="card mb-3 mt-3 col-4 m-5">
-        <h3 class="card-header bg-primary text-light">Rock Creek Dispersed Site</h3>
-        <div class="card-body backgroundGray">
-          <h5 class="card-title">Durango</h5>
-          <h6 class="card-subtitle text-muted">CO</h6>
-        </div>
-
-        <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-          <rect width="100%" height="100%" fill="#868e96"></rect>
-          <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-        </svg>
-
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item bg-dark text-light">⭐ ⭐ ⭐ ⭐ ⭐</li>
-          <li class="list-group-item bg-dark text-light">Amenities: <br> Yes</li>
-          <li class="list-group-item bg-dark text-light">4 Wheel Drive <br> Required</li>
-        </ul>
-
-<!-- ACCORDIAN -->
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed bg-warning text-light text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                    Click here to read this review.  
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
-                <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer bg-dark text-light">
-          Price: <br> FREE
-        </div>
-      </div>
-    </section>
+{{/each}}
