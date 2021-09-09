@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="stylesheet" href="./bootstrap.css" /> -->
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <title>Write a review! CAMPING WEBSITE</title>
+  </head>
+
+
+  <body>
+
+
+    <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CAMPING WEBSITE</a>
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02"
+                aria-controls="navbarColor02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <a class="nav-link" href="#">Write a review</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a
+                        class="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        href="#"
+                        role="button"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        >Select a State</a
+                    >
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                    </li>
+                </ul>
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                    Login
+                    </button>
+                    
+                </div>
+            </div>
+            </nav>
+
+
+            <section class="backgroundImageNewForm text-dark text-center">
+                <!-- container div for cards -->
+                <div class="container d-flex justify-content-center">
+
+                    <form>
+
+                        <fieldset class="mt-2">
+                          <h2>Tell us about your campsite experience!</h2>
+<!-- CAMPSITE NAME -->
+                          <div class="form-group mt-2">
+                            <label for="exampleInputPassword1" class="form-label text-custom-light-sm mt-4">Campsite name:</label>
+                            <input class="form-control" id="exampleInputPassword1" placeholder="What's the name of the campsite?">
+                          </div>
+<!-- CITY NAME -->
+                          <div class="form-group mt-2">
+                            <label for="exampleInputPassword1" class="form-label text-custom-light-sm mt-4 text-custom-light-sm">City:</label>
+                            <input class="form-control" id="exampleInputPassword1" placeholder="What city/county did you camp in?">
+                          </div>
+<!-- STATE DROPDOWN -->
+                          <div class="form-group mt-2">
+                            <label for="exampleSelect1" class="form-label text-custom-light-sm mt-4">State:</label>
+                            <select class="form-select" id="exampleSelect1">
+                              <option>AL</option>
+                              <option>AL</option>
+                              <option>CO</option>
+                              <option>DC</option>
+                              <option>WA</option>
+                              <option>NY</option>
+                            </select>
+                          </div>
+<!-- ACCESSIBILITY / DO YOU NEED 4WD TO GET THERE? -->
+                          <div class="form-group mt-2">
+                            <label for="exampleSelect1" class="form-label text-custom-light-sm mt-4">Accessibility:</label>
+                            <select class="form-select" id="exampleSelect1">
+                              <option>Do you need 4 wheel drive to get there?</option>
+                              <option>YES</option>
+                              <option>NO</option>
+                            </select>
+                          </div>
+                          <!-- ACCESSIBILITY / DO YOU NEED 4WD TO GET THERE? -->
+                          <div class="form-group mt-2">
+                            <label for="exampleSelect1" class="form-label mt-4 text-custom-light-sm">Your rating (out of 5)</label>
+                            <select class="form-select" id="exampleSelect1">
+                              <option>5 - Amazing! </option>
+                              <option>4 - Pretty good</option>
+                              <option>3 - Whatever</option>
+                              <option>2 - Bad</option>
+                              <option>1 - DO NOT GO</option>
+                            </select>
+                          </div>
+  <!-- PRICE / DO YOU NEED TO PAY? -->
+                        <div class="form-group mt-2">
+                            <label for="exampleSelect1" class="form-label mt-4 text-custom-light-sm">Did you have to pay? What was the price?</label>
+                            <select class="form-select" id="exampleSelect1">
+                            <option>Free </option>
+                            <option>Around $10</option>
+                            <option>Around $20</option>
+                            <option>Around $30</option>
+                            <option>Around $40</option>
+                            <option>OVER $50</option>
+                            </select>
+                        </div>
+<!-- UPLOAD AN IMAGE -->
+                        <div class="form-group mt-2">
+                            <label for="formFile" class="form-label mt-3 text-custom-light-sm">Upload an image</label>
+                            <input class="form-control mb-5" type="file" id="formFile">
+                        </div>
+<!-- REVIEW TEXT -->
+                        <div class="form-group mt-4">
+                            <h2 for="exampleTextarea" class="form-label mt-4 text-custom-light">Write your review here:</h2>
+                            <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+                        </div>
+
+                </div>
+            </section>          
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
