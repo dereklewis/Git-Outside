@@ -23,7 +23,7 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    amenities: {
       type: DataTypes.STRING,
       allowNull: false,
     },
