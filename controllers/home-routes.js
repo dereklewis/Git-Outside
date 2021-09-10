@@ -4,20 +4,20 @@ const Review = require("../models/Review");
 router.get("/", async (req, res) => {
   console.log("Got this far");
   try {
-    const dbReviewData = await Review.findAll({
-      attributes: [
-        "id",
-        "campground_name",
-        "city",
-        "state",
-        "amenities",
-        "accessibility",
-        "price",
-        "review_text",
-        "rating",
-      ],
-    });
-    res.status(200).json(dbReviewData);
+    // const dbReviewData = await Review.findAll({
+    //   attributes: [
+    //     "id",
+    //     "campground_name",
+    //     "city",
+    //     "state",
+    //     "amenities",
+    //     "accessibility",
+    //     "price",
+    //     "review_text",
+    //     "rating",
+    //   ],
+    // });
+    res.render("login", { routeName: "loginRoute" });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -61,9 +61,9 @@ router.get("/new", async (req, res) => {
   res.render("post-new-review", {});
 });
 
-router.get("/storybook", (req, res) =>
-  res.render("index", { routeName: "Member" })
-);
+// router.get("/storybook", (req, res) =>
+//   res.render("index", { routeName: "Member" })
+// );
 
 // router.get("/storybook2", (req, res) =>
 //   res.render("login", { routeName: "Login" })
