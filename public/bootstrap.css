@@ -11904,7 +11904,7 @@ fieldset:disabled .btn {
   background-attachment: fixed;
   background-position: center;
   max-width: 1000%;
-  height: 1300px;
+  height: 1500px;
 }
 
 .custom-light-text {
@@ -11915,12 +11915,13 @@ fieldset:disabled .btn {
   color: whitesmoke;
   background-color: black;
   font-size: 50px;
+  border-radius: 7px;
 }
-
 .text-custom-light-sm {
   color: whitesmoke;
   background-color: black;
   padding: 5px;
+  border-radius: 7px;
 }
 
 .backgroundImageForest {
