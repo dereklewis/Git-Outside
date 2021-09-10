@@ -5,9 +5,9 @@
     "city": "Salt Lake",
     "amenities": true,
     "accessibility": false,
-    "price": 0.0,
+    "price": "free",
     "review_text": "Wow so cool, again",
-    "rating": 5
+    "rating": "5"
   },
   {
     "campground_name": "Hanging Lake",
@@ -15,9 +15,9 @@
     "city": "Mountain Town",
     "amenities": false,
     "accessibility": false,
-    "price": 50.0,
+    "price": "Around 10$",
     "review_text": "Wow amazing",
-    "rating": 5
+    "rating": "5"
   },
   {
     "campground_name": "Lookout Canyon",
@@ -25,9 +25,9 @@
     "city": "Omaha",
     "amenities": false,
     "accessibility": true,
-    "price": 24.0,
+    "price": "Around 20$",
     "review_text": "Best trip ever",
-    "rating": 4
+    "rating": "4"
   },
   {
     "campground_name": "Big Lake",
@@ -37,6 +37,6 @@
     "accessibility": true,
     "price": 38.0,
     "review_text": "Cant wait to go back next year",
-    "rating": 3
+    "rating": "3"
   }
 ]

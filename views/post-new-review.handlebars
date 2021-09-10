@@ -2,25 +2,25 @@
   <!-- container div for cards -->
   <div class="container d-flex justify-content-center">
 
-    <form>
+    <form class="newReview">
 
       <fieldset class="mt-2">
         <h2>Tell us about your campsite experience!</h2>
         <!-- CAMPSITE NAME -->
         <div class="form-group mt-2">
           <label for="exampleInputPassword1" class="form-label text-custom-light-sm mt-4">Campsite name:</label>
-          <input class="form-control" id="exampleInputPassword1" placeholder="What's the name of the campsite?">
+          <input class="form-control" id="campground_name" placeholder="What's the name of the campsite?">
         </div>
         <!-- CITY NAME -->
         <div class="form-group mt-2">
           <label for="exampleInputPassword1"
             class="form-label text-custom-light-sm mt-4 text-custom-light-sm">City:</label>
-          <input class="form-control" id="exampleInputPassword1" placeholder="What city/county did you camp in?">
+          <input class="form-control" id="city_name" placeholder="What city/county did you camp in?">
         </div>
         <!-- STATE DROPDOWN -->
         <div class="form-group mt-2">
           <label for="exampleSelect1" class="form-label text-custom-light-sm mt-4">State:</label>
-          <select class="form-select" id="exampleSelect1">
+          <select class="form-select" id="state_name">
             <option>AL</option>
             <option>AL</option>
             <option>CO</option>
@@ -29,10 +29,19 @@
             <option>NY</option>
           </select>
         </div>
+        <!-- Amenities/ Are there bathrooms? -->
+        <div class="form-group mt-2">
+          <label for="exampleSelect1" class="form-label text-custom-light-sm mt-4">Amenities:</label>
+          <select class="form-select" id="amenities">
+            <option>Is this a dispersed campground?</option>
+            <option>YES</option>
+            <option>NO</option>
+          </select>
+        </div>
         <!-- ACCESSIBILITY / DO YOU NEED 4WD TO GET THERE? -->
         <div class="form-group mt-2">
           <label for="exampleSelect1" class="form-label text-custom-light-sm mt-4">Accessibility:</label>
-          <select class="form-select" id="exampleSelect1">
+          <select class="form-select" id="accessibility">
             <option>Do you need 4 wheel drive to get there?</option>
             <option>YES</option>
             <option>NO</option>
@@ -41,7 +50,7 @@
         <!-- ACCESSIBILITY / DO YOU NEED 4WD TO GET THERE? -->
         <div class="form-group mt-2">
           <label for="exampleSelect1" class="form-label mt-4 text-custom-light-sm">Your rating (out of 5)</label>
-          <select class="form-select" id="exampleSelect1">
+          <select class="form-select" id="rating">
             <option>5 - Amazing! </option>
             <option>4 - Pretty good</option>
             <option>3 - Whatever</option>
@@ -53,7 +62,7 @@
         <div class="form-group mt-2">
           <label for="exampleSelect1" class="form-label mt-4 text-custom-light-sm">Did you have to pay? What was the
             price?</label>
-          <select class="form-select" id="exampleSelect1">
+          <select class="form-select" id="price">
             <option>Free </option>
             <option>Around $10</option>
             <option>Around $20</option>
@@ -76,8 +85,14 @@
         <!-- REVIEW TEXT -->
         <div class="form-group mt-4">
           <h2 for="exampleTextarea" class="form-label mt-4 text-custom-light">Write your review here:</h2>
-          <textarea class="form-control" id="exampleTextarea" rows="10"></textarea>
+          <textarea class="form-control" id="review_text" rows="10"></textarea>
         </div>
 
+          <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary mt-5 ">Submit</button>
+          </div>
+    </form>
   </div>
 </section>
+
+<script src="./js/review.js"></script>

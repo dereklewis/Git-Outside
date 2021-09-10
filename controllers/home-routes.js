@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
       campground_name: req.body.campground_name,
       city: req.body.city,
       state: req.body.state,
-      description: req.body.description,
+      amenities: req.body.amenities,
       accessibility: req.body.accessibility,
       price: req.body.price,
       review_text: req.body.review_text,
