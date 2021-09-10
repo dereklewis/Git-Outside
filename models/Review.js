@@ -24,7 +24,7 @@ Review.init(
       allowNull: false,
     },
     amenities: {
-      type: DataTypes.STRING,
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
     accessibility: {
@@ -32,7 +32,7 @@ Review.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     review_text: {
@@ -40,7 +40,7 @@ Review.init(
       allowNull: false,
     },
     rating: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },

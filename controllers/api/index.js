@@ -3,7 +3,7 @@ const Review = require("../../models/Review");
 
 const reviewRoutes = require("./review-routes.js");
 
-// router.use("/review", reviewRoutes);
+router.use("/review", reviewRoutes);
 
 router.get("/:state", async (req, res) => {
   console.log("hitting the state route!!!!!");
