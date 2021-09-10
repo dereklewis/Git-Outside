@@ -3965,6 +3965,8 @@ fieldset:disabled .btn {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -11935,4 +11937,11 @@ fieldset:disabled .btn {
 
 .backgroundGray {
   background-color: darkseagreen;
+}
+
+@media (max-width: 500px) {
+  .dropdown-menu {
+    height: 200px;
+    overflow-y: auto;
+  }
 }
