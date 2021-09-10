@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
         "campground_name",
         "city",
         "state",
-        "description",
+        "amenities",
         "accessibility",
         "price",
         "review_text",
