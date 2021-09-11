@@ -39,6 +39,10 @@ Review.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     rating: {
       type: DataTypes.STRING,
       allowNull: false,
