@@ -34,11 +34,14 @@ router.post("/", async (req, res) => {
 
 router.get("/login", (req, res) => {
   console.log("login route working!!!!!!!!!!!!!!!!!");
-  res.render("login", { routeName: "loginRoute" });
+  res.render("login", {
+    routeName: "loginRoute",
+  });
 });
 
-router.get("/new", async (req, res) => {
-  res.render("post-new-review", {});
+router.get("/new", withAuth, (req, res) => {
+  console.log(req.session);
+  res.render("post-new-review", { loggedIn: true });
 });
 
 // router.get("/new", withAuth, async (req, res) => {
