@@ -6,7 +6,7 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   console.log("Got this far");
   try {
-    res.render("login", { routeName: "loginRoute" });
+    res.render("home", { routeName: "homeRoute" });
   } catch (err) {
     res.status(500).json(err);
   }
