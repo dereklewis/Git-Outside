@@ -1,22 +1,11 @@
 const router = require("express").Router();
 const Review = require("../models/Review");
+const User = require("../models/User");
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   console.log("Got this far");
   try {
-    // const dbReviewData = await Review.findAll({
-    //   attributes: [
-    //     "id",
-    //     "campground_name",
-    //     "city",
-    //     "state",
-    //     "amenities",
-    //     "accessibility",
-    //     "price",
-    //     "review_text",
-    //     "rating",
-    //   ],
-    // });
     res.render("login", { routeName: "loginRoute" });
   } catch (err) {
     res.status(500).json(err);
@@ -44,29 +33,28 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  // if (req.session.logged_in) {
-  //   res.redirect("/");
-  //   return;
-  // }
   console.log("login route working!!!!!!!!!!!!!!!!!");
   res.render("login", { routeName: "loginRoute" });
 });
 
 router.get("/new", async (req, res) => {
-  // if (req.session.logged_in) {
-  // res.redirect("/");
-
-  // }
-
   res.render("post-new-review", {});
 });
 
-// router.get("/storybook", (req, res) =>
-//   res.render("index", { routeName: "Member" })
-// );
-
-// router.get("/storybook2", (req, res) =>
-//   res.render("login", { routeName: "Login" })
-// );
+// router.get("/new", withAuth, async (req, res) => {
+//   try {
+//     const userData = await User.findAll({
+//       attributes: { exclude: ["password"] },
+//       order: [["name", "ASC"]],
+//     });
+//     const users = userData.map((project) => project.get({ plain: true }));
+//     res.render("post-new-review", {
+//       users,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
