@@ -10,15 +10,17 @@
                   <h6 class="card-subtitle text-muted">{{reviews.state}}</h6>
                 </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="300" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+                {{!-- <svg xmlns="image:{{reviews.image}}" class="d-block user-select-none" width="100%" height="300" aria-label="Campsite image" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
                   <rect width="100%" height="100%" fill="#868e96"></rect>
                   <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-                </svg>
+                </svg> --}}
+                  <img src="{{reviews.image}}" alt="campsite photo">
+                
 
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item bg-dark text-light">RATING: <br> {{reviews.rating}}</li>
-                  <li class="list-group-item bg-dark text-light">AMENITIES: <br> {{reviews.amenities}}</bt></li>
-                  <li class="list-group-item bg-dark text-light">ACCESSIBILITY: <br> {{reviews.accessibility}}</li>
+                  <li class="list-group-item bg-dark text-light">Is this a dispersed campground? <br> <br> {{reviews.amenities}}</bt></li>
+                  <li class="list-group-item bg-dark text-light">Do you need 4 Wheel Drive to get there? <br> <br> {{reviews.accessibility}}</li>
                 </ul>
 
 <!-- ACCORDIAN -->
@@ -40,5 +42,7 @@
                   PRICE: <br> {{reviews.price}}
                 </div>
             </div>
+
+          
 
 {{/each}}

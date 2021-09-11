@@ -10,6 +10,9 @@ const postNewReview = async (event) => {
   const price = document.querySelector("#price").value.trim();
   const reviewText = document.querySelector("#review_text").value.trim();
 
+  const image = url;
+
+  console.log(image);
   console.log(state);
   console.log(campground);
 
@@ -21,7 +24,8 @@ const postNewReview = async (event) => {
     accessibility &&
     rating &&
     price &&
-    reviewText
+    reviewText &&
+    image
   ) {
     const response = await fetch("/api/review/new", {
       method: "POST",
@@ -34,13 +38,14 @@ const postNewReview = async (event) => {
         rating,
         price,
         reviewText,
+        image,
       }),
       headers: { "Content-Type": "application/json" },
     });
     console.log(response);
 
     if (response.ok) {
-      document.location.replace("/api/review/new");
+      document.location.replace(`/api/${state}`);
     } else {
       alert("Failed to post review.");
     }

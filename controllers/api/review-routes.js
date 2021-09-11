@@ -13,6 +13,7 @@ router.post("/new", async (req, res) => {
       price: req.body.price,
       review_text: req.body.reviewText,
       rating: req.body.rating,
+      image: req.body.image,
     });
 
     res.status(200).json(newReview);
