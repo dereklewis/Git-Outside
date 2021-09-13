@@ -11984,3 +11984,11 @@ fieldset:disabled .btn {
   background: #ddd;
   color: black;
 }
+
+.homePageText {
+  font-size: 24px;
+}
+
+.homePageHeader {
+  font-size: 60px;
+}
