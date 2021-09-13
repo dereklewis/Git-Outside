@@ -5,6 +5,7 @@
 ## Table of Contents:
 
 - [License](#license)
+- [Deployment](#deployment)
 - [Description](#description)
 - [Installation](#installation)
 - [Test](#test)
@@ -15,6 +16,10 @@
 ## License
 
 This project is licensed under the MIT license.
+
+## Deployment
+
+https://git-outside.herokuapp.com/
 
 ## Description
 
@@ -33,7 +38,6 @@ This application is called Git Outside. This allows you to add, read and post re
 <img width="300" alt="homepage" src="https://user-images.githubusercontent.com/87509827/133009432-70f0817d-d53b-4ae8-9042-cebbde857029.PNG">
 <img width="300" alt="writeReview" src="https://user-images.githubusercontent.com/87509827/133009459-8420c81d-3b6a-4b58-9279-f3e8d8ea71a8.PNG">
 <img width="300" alt="cards" src="https://user-images.githubusercontent.com/87509827/133009511-af7363bd-7432-407b-bb46-d4a3aaf2db56.png")
-
 
 ## Technologies
 
