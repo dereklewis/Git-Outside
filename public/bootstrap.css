@@ -11962,7 +11962,7 @@ fieldset:disabled .btn {
 /* Add some content at the bottom of the video/page */
 .video-content {
   position: fixed;
-  bottom: 60%;
+  bottom: 30%;
   color: #f1f1f1;
   width: 100%;
   padding: 20px;
